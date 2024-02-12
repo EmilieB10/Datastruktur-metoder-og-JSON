@@ -288,6 +288,7 @@ const ifStatement = () => {
 
 const result = `
 <div>
+        <h2>Last Task</h2>
         <p>Random array: ${randomArray}</p>
         <p>Odd array: ${oddArray} <br> Even array: ${evenArray}</p>
         <p>Largest number in odd array: ${largestNumber(
