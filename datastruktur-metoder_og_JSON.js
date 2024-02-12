@@ -93,94 +93,94 @@ console.log(commonHobbies);
 
 const task = document.querySelector("#oppgave");
 
-// const showPeople = (data) => {
-//   data.map((person) => {
-//     const array = [];
-//     const commonHobbies = data.map((person2) => {
-//       if (person != person2) {
-//         person.hobbies.map((hobby) => {
-//           if (person2.hobbies.includes(hobby)) {
-//             array.push({
-//               person: person2.name,
-//               hobby,
-//               hobby,
-//             });
-//           }
-//         });
-//       }
-//     });
-//     const card = `
-//     <div class="card standard-box_style">
-//         <h2>${person.name}</h2>
-//         <p>Age: ${person.age}</p>
-//         <p>email: ${person.email}</p>
-//         <p>country: ${person.country}</p>
-//         <p>hobbies: ${person.hobbies}</p>
-//         <p>Common hobbies with ${array.map((common) => {
-//           return "<br>" + common.person + ": " + common.hobby + " ";
-//         })}</p>
-//     </div>
-//     `;
+const showPeople = (data) => {
+  data.map((person) => {
+    const array = [];
+    const commonHobbies = data.map((person2) => {
+      if (person != person2) {
+        person.hobbies.map((hobby) => {
+          if (person2.hobbies.includes(hobby)) {
+            array.push({
+              person: person2.name,
+              hobby,
+              hobby,
+            });
+          }
+        });
+      }
+    });
+    const card = `
+    <div class="card standard-box_style">
+        <h2>${person.name}</h2>
+        <p>Age: ${person.age}</p>
+        <p>email: ${person.email}</p>
+        <p>country: ${person.country}</p>
+        <p>hobbies: ${person.hobbies}</p>
+        <p>Common hobbies with ${array.map((common) => {
+          return "<br>" + common.person + ": " + common.hobby + " ";
+        })}</p>
+    </div>
+    `;
 
-//     const newCard = document.createElement("div");
-//     newCard.innerHTML = card;
-//     task.appendChild(newCard);
-//   });
-// };
-// showPeople(peopleArrayWithObjects);
+    const newCard = document.createElement("div");
+    newCard.innerHTML = card;
+    task.appendChild(newCard);
+  });
+};
+showPeople(peopleArrayWithObjects);
 
 // __________________________________________________________________
 
-// function showPeopleTwo(data) {
-//   data.map((person) => {
-//     const array = [];
-//     const commonHobbies = data.map((person2) => {
-//       if (person != person2) {
-//         person.hobbies.map((hobby) => {
-//           if (person2.hobbies.includes(hobby)) {
-//             array.push({
-//               person: person2.name,
-//               hobby,
-//               hobby,
-//             });
-//           }
-//         });
-//       }
-//     });
-//     const card = document.createElement("div");
+function showPeopleTwo(data) {
+  data.map((person) => {
+    const array = [];
+    const commonHobbies = data.map((person2) => {
+      if (person != person2) {
+        person.hobbies.map((hobby) => {
+          if (person2.hobbies.includes(hobby)) {
+            array.push({
+              person: person2.name,
+              hobby,
+              hobby,
+            });
+          }
+        });
+      }
+    });
+    const card = document.createElement("div");
 
-//     const heading = document.createElement("h2");
-//     heading.textContent = person.name;
+    const heading = document.createElement("h2");
+    heading.textContent = person.name;
 
-//     const ageParagraph = document.createElement("p");
-//     ageParagraph.textContent = `Age: ${person.age}`;
+    const ageParagraph = document.createElement("p");
+    ageParagraph.textContent = `Age: ${person.age}`;
 
-//     const emailParagraph = document.createElement("p");
-//     emailParagraph.textContent = `Email: ${person.email}`;
+    const emailParagraph = document.createElement("p");
+    emailParagraph.textContent = `Email: ${person.email}`;
 
-//     const countryParagraph = document.createElement("p");
-//     countryParagraph.textContent = `Country: ${person.country}`;
+    const countryParagraph = document.createElement("p");
+    countryParagraph.textContent = `Country: ${person.country}`;
 
-//     const hobbiesParagraph = document.createElement("p");
-//     hobbiesParagraph.textContent = `Hobbies: ${person.hobbies}`;
+    const hobbiesParagraph = document.createElement("p");
+    hobbiesParagraph.textContent = `Hobbies: ${person.hobbies}`;
 
-//     const commonhobbies = document.createElement("p");
+    const commonhobbies = document.createElement("p");
 
-//     task.appendChild(heading);
-//     task.appendChild(ageParagraph);
-//     task.appendChild(emailParagraph);
-//     task.appendChild(countryParagraph);
-//     task.appendChild(hobbiesParagraph);
-//     const common = array.map((common) => {
-//       commonhobbies.textContent += common.person + ": " + common.hobby + ", ";
-//       task.appendChild(commonhobbies);
-//     });
+    task.appendChild(heading);
+    task.appendChild(ageParagraph);
+    task.appendChild(emailParagraph);
+    task.appendChild(countryParagraph);
+    task.appendChild(hobbiesParagraph);
+    const common = array.map((common) => {
+      commonhobbies.textContent += common.person + ": " + common.hobby + ", ";
+      task.appendChild(commonhobbies);
+    });
 
-//     task.appendChild(card);
-//   });
-// }
+    task.appendChild(card);
+  });
+}
 
-// showPeopleTwo(peopleArrayWithObjects);
+showPeopleTwo(peopleArrayWithObjects);
 //! 1.7
 
 /* Use .filter to find all persons who have atleast 1 hobby that is the same hobbies as firstPerson. Display this using DOM manipulation */
